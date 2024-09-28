@@ -10,7 +10,7 @@ import orderRouter from "./routes/orderRoute.js"
 // app config
 
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000;
 
 // middleware
 
@@ -28,7 +28,7 @@ app.use("/api/food", foodRouter)
 app.use("/images", express.static("uploads"))
 app.use("/api/user", userRouter)
 app.use("/api/cart", cartRouter)
-app.use("/api/order",orderRouter)
+app.use("/api/order", orderRouter)
 
 app.get("/", (req, res) => {
     res.send("Hello World")
