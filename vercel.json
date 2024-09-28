@@ -3,20 +3,17 @@
     "builds": [
       {
         "src": "backend/server.js",
-        "use": "@vercel/node",
-        "config": {
-          "includeFiles": ["backend/**"]
-        }
+        "use": "@vercel/node"
       },
       {
-        "src": "admin/package.json",
+        "src": "frontend/package.json",
         "use": "@vercel/static-build",
         "config": {
           "distDir": "dist"
         }
       },
       {
-        "src": "frontend/package.json",
+        "src": "admin/package.json",
         "use": "@vercel/static-build",
         "config": {
           "distDir": "dist"
